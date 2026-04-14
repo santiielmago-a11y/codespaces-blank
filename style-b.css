@@ -1,0 +1,85 @@
+body {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    background: #050714;
+    color: #e7edf8;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 25% 15%, rgba(96, 165, 250, 0.28), transparent 24%),
+                radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.24), transparent 20%),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 35%, rgba(15, 23, 42, 0.24));
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    max-width: 760px;
+    margin: 72px auto;
+    padding: 46px 42px;
+    background: rgba(6, 10, 28, 0.96);
+    border: 2px solid rgba(59, 130, 246, 0.18);
+    border-radius: 26px;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    border: 1px dashed rgba(96, 165, 250, 0.18);
+    border-radius: 30px;
+    pointer-events: none;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    letter-spacing: -0.06em;
+    color: #f8fafc;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    padding: 18px 42px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+    background: linear-gradient(135deg, #38bdf8 0%, #f472b6 40%, #f59e0b 100%);
+    border: none;
+    border-radius: 14px;
+    text-decoration: none;
+    box-shadow: 0 24px 48px rgba(56, 189, 248, 0.22);
+    transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-4px);
+    filter: brightness(1.08);
+    box-shadow: 0 26px 56px rgba(56, 189, 248, 0.28);
+}
+
+@media (max-width: 720px) {
+    .container {
+        margin: 48px 18px;
+        padding: 34px 24px;
+    }
+}
